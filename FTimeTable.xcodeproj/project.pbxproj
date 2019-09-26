@@ -15,6 +15,7 @@
 		E517CEC72338A03000A2FD45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E517CEC52338A03000A2FD45 /* LaunchScreen.storyboard */; };
 		E517CED22338A03000A2FD45 /* FTimeTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517CED12338A03000A2FD45 /* FTimeTableTests.swift */; };
 		E517CEDD2338A03000A2FD45 /* FTimeTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E517CEDC2338A03000A2FD45 /* FTimeTableUITests.swift */; };
+		E5D1FB312339F1CD00C03823 /* WebviewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D1FB302339F1CD00C03823 /* WebviewAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E517CED82338A03000A2FD45 /* FTimeTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTimeTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E517CEDC2338A03000A2FD45 /* FTimeTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTimeTableUITests.swift; sourceTree = "<group>"; };
 		E517CEDE2338A03000A2FD45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5D1FB302339F1CD00C03823 /* WebviewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				E517CEB92338A02F00A2FD45 /* AppDelegate.swift */,
 				E517CEBB2338A02F00A2FD45 /* ViewController.swift */,
+				E5D1FB302339F1CD00C03823 /* WebviewAction.swift */,
 				E517CEBD2338A02F00A2FD45 /* Main.storyboard */,
 				E517CEC32338A03000A2FD45 /* Assets.xcassets */,
 				E517CEC52338A03000A2FD45 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E517CEC22338A02F00A2FD45 /* FTimeTable.xcdatamodeld in Sources */,
+				E5D1FB312339F1CD00C03823 /* WebviewAction.swift in Sources */,
 				E517CEBC2338A02F00A2FD45 /* ViewController.swift in Sources */,
 				E517CEBA2338A02F00A2FD45 /* AppDelegate.swift in Sources */,
 			);
