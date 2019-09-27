@@ -26,6 +26,51 @@ class WebViewController{
         
     }
     
+    func gettingData(_ bringBackData: @escaping (Any?, Error?) -> Void){
+        let js = """
+                  var timeTable = {
+                      0: [],
+                      1: [],
+                      2: [],
+                      3: [],
+                      4: [],
+                      5: [],
+                      6: []
+                  };
+                  var tableToArray = Array.prototype.map.call(document.querySelectorAll('#aspnetForm > table > tbody > tr:nth-child(1) > td > div > table'), function(tr){
+                    return Array.prototype.map.call(tr.querySelectorAll('td'), function(td){
+                      return td.innerText;
+                      });
+                    });
+
+                  for(var i=0; i < tableToArray[0].length; i+=8){
+                      var slot = []
+                      
+                      var date = 0;
+                      for(var j=i+1; j < i+8; j++){
+                          slot.push(tableToArray[0][j]);
+                          timeTable[date].push(tableToArray[0][j]);
+                          date++;
+                       }
+                  }
+                  JSON.stringify(timeTable);
+                  """
+        /*
+        webView.evaluateJavaScript(js, completionHandler: { (rawJson, error) in
+            let jsonData = Data((rawJson as! String).utf8)
+            
+            do{
+                if let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Array<String>] {
+                    bringBackData(json)
+                }
+            }catch let err as NSError{
+                print("Failed to load json \(err.localizedDescription)")
+            }
+            
+        })*/
+        webView.evaluateJavaScript(js, completionHandler: bringBackData)
+    }
+    
     func handleAfterCampus(){
         webView.evaluateJavaScript("$('#loginform > center > div > div:nth-child(2) > div > div > div').click();", completionHandler: nil)
     }
